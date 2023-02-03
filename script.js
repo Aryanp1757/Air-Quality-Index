@@ -8,8 +8,8 @@ const airQualityStat = document.querySelector(".air-quality-status")
 const srchBtn = document.querySelector(".search-btn")
 const componentsEle = document.querySelectorAll(".component-val")
 
-const appId = "28a7d78ab2cf856b7f1c4c8a1968a5a7" // Get your own API Key from https://home.openweathermap.org/api_keys
-const link = "https://api.openweathermap.org/data/2.5/air_pollution"	// API end point
+const appId = "81c9497cac060376b844421aaf467ada" 
+const link = "https://api.openweathermap.org/data/2.5/air_pollution"	
 
 const getUserLocation = () => {
 	// Get user Location
@@ -53,26 +53,26 @@ const setValuesOfAir = airData => {
 	// Set status of air quality
 
 	switch (aqi) {
-		case 1:
+		case 1 :
 			airStat = "Good"
 			color = "white"
 			break
 			case 2:
-				airStat = "Fair"
-				color = "green"
-				break
-			case 3:
 				airStat = "Moderate"
 				color = "brown"
 				break
-			case 4:
-				airStat = "Poor"
-				color = "orange"
+			case 3:
+				airStat = " Unhealthy"
+				color = "green"
 				break
-		case 5:
-			airStat = "Very Poor"
-			color = "red"
-			break
+			case 4:
+				airStat = "very  Unhealthy"
+				color = "yellow"
+				break
+			case 5:
+				airStat = "hazardous"
+				color = "red"
+				break
 		default:
 			airStat = "Unknown"
 	}
